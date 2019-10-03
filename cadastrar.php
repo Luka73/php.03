@@ -16,9 +16,10 @@
             <label>E-mail: </label>
             <input type="email" name="email" class="form-control col-md-4">
             <label>Telefone: </label>
-            <input type="tel" name="tel" class="form-control col-md-4"><br><br>
+            <input type="tel" name="tel" class="form-control col-md-4"><br>
             <input type="submit" value="Enviar" class="btn btn-success">
-        </form>
+        </form><br>
+        <a href="index.php">Página Inicial</a>
     </div>
 </body>
 </html>

@@ -40,16 +40,16 @@
                             <th>Editar</th>
                             <th>Excluir</th>
                         </tr>
-                        <?php
-                           while($row = mysqli_fetch_array($result)){
-                               echo "<tr>";
-                               echo "<td>{$row['nome']}</td>";
-                               echo "<td>{$row['email']}</td>";
-                               echo "<td>{$row['tel']}</td>";
-                               echo "<td><i class='fas fa-user-edit'></i></td>";
-                               echo "<td><i class='fas fa-trash-alt'></i></td>";
-                               echo "</tr>";
-                           }     
+                <?php
+                   while($row = mysqli_fetch_array($result)){
+                   echo "<tr>";
+                   echo "<td>{$row['nome']}</td>";
+                   echo "<td>{$row['email']}</td>";
+                   echo "<td>{$row['tel']}</td>";
+                   echo "<td><a href='editar.php?mat={$row[0]}'><i class='fas fa-user-edit'></i></a></td>";
+                   echo "<td><i class='fas fa-trash-alt'></i></td>";
+                   echo "</tr>";
+                }     
                         ?>
                     </table>
                 <?php
@@ -59,6 +59,7 @@
                 mysqli_close($con);
             }           
         ?>
+        <a href="index.php">Página Inicial</a>
     </div>
 </body>
 </html>
