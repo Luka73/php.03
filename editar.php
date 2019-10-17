@@ -17,14 +17,15 @@
     <div class="container">
        <h3>Edição de Alunos</h3>
        <hr>
-        <form action="gravar.php" method="post">
+        <form action="atualizar.php" method="post">
+            <input type="hidden" readonly name="mat" value="<?php echo $row['mat'];?>">
             <label>Nome: </label>
             <input type="text" name="nome" class="form-control col-md-4" value="<?php echo $row['nome'];?>">
             <label>E-mail: </label>
             <input type="email" name="email" class="form-control col-md-4" value="<?php echo $row['email'];?>">
             <label>Telefone: </label>
             <input type="tel" name="tel" class="form-control col-md-4" value="<?php echo $row['tel'];?>"><br>
-            <input type="submit" value="Enviar" class="btn btn-success">
+            <input type="submit" value="Atualizar" class="btn btn-success">
         </form><br>
         <a href="index.php">Página Inicial</a>
     </div>
